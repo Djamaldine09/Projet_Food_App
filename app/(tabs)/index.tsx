@@ -1,9 +1,13 @@
 import CartButton from '@/components/CartButton';
 import { images, offers } from '@/constants';
 import React from 'react';
+import useAuthStore from '@/store/auth.store';
 import { FlatList, Image, Pressable, SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 export default function Index() {
+
+  const { user } = useAuthStore();
+
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>

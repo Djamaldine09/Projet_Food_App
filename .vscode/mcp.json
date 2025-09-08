@@ -1,0 +1,8 @@
+{
+  "servers": {
+    "Sentry": {
+      "url": "https://mcp.sentry.dev/mcp/projet-n3/react-native_food",
+      "type": "http"
+    }
+  }
+}

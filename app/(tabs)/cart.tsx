@@ -13,13 +13,13 @@ const CartScreen: React.FC = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        padding: 16,
+        alignItems: 'center',
+        justifyContent: 'center',
         backgroundColor: '#fff',
     },
     title: {
         fontSize: 24,
         fontWeight: 'bold',
-        marginBottom: 16,
     },
 });
 

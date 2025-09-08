@@ -13,9 +13,8 @@ type AuthState = {
 
     fetchAuthenticatedUser: () => Promise<void>;
 }
-
 const useAuthStore = create<AuthState>((set) => ({
-    isAuthenticated: false,
+  isAuthenticated: false,
     user: null,
     isLoading: true,
 
@@ -29,7 +28,7 @@ const useAuthStore = create<AuthState>((set) => ({
         try {
             const user = await getCurrentUser();
 
-            if(user) set({ isAuthenticated: true, user: user as User })
+            if(user) set({ isAuthenticated: true, user: user as unknown as User });
             else set( { isAuthenticated: false, user: null } );
         } catch (e) {
             console.log('fetchAuthenticatedUser error', e);
